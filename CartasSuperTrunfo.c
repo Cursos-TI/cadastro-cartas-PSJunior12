@@ -12,12 +12,16 @@ int main() {
   float area1, pib1 = 133.75;
   char estado1 = 'A';
   char codigo1[5], cidade1[50] = "Serra";
+  float densidade1 = 1.0;
+  float pibpercapita1 = 1.1;
 
      //Informações de variáveis da Cidade 2
   int populacao2, turismo2 = 30;  
   float area2, pib2 = 233.75;
   char estado2 = 'H';
   char codigo2[5], cidade2[50] = "Rio";
+  float densidade2 = 2.0;
+  float pibpercapita2 = 21.1;
   
   // Área para entrada de dados
     
@@ -43,9 +47,15 @@ int main() {
   printf("Digite a quantidade de pontos turísticos: ");
   scanf(" %d" ,&turismo1);
 
+//Calcular a Densidade Populacional = População / Área 
+ densidade1 = populacao1 / area1;  
+
+//Calcular Pib per Capita = PIB / população
+ pibpercapita1 = pib1 / populacao1; 
+
     //Dados da Cidade 2
 
-  printf(\n"Digite a inicial do seu estado: ");
+  printf("\nDigite a inicial do seu estado: ");
   scanf(" %c" ,&estado2);
 
   printf("Digite o código da carta: ");
@@ -66,6 +76,14 @@ int main() {
   printf("Digite a quantidade de pontos turísticos: ");
   scanf(" %d" ,&turismo2);
 
+
+//Calcular a Densidade Populacional = População / Área 
+ densidade2 = populacao2 / area2;  
+
+//Calcular Pib per Capita = PIB / população
+ pibpercapita2 = pib2 / populacao2; 
+
+
   // Área para exibição dos dados da cidade
 
      //Imprimir os dados da Cidade 1
@@ -79,6 +97,9 @@ int main() {
   printf("PIB: %.2f bilhões de reais\n" ,pib1);
   printf("Número de Pontos Turísticos: %d\n" ,turismo1);
 
+  printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+  printf("PIB per Capita: %.2f \n", pibpercapita1);
+
      //Imprimir os dados da Cidade 2
 
   printf("\n - Carta 2 -\n");
@@ -89,6 +110,13 @@ int main() {
   printf("Área: %.2f km²\n" ,area2);
   printf("PIB: %.2f bilhões de reais\n" ,pib2);
   printf("Número de Pontos Turísticos: %d\n" ,turismo2);
+
+  //Imprimir resultado das novas variáveis: Densidade Populacional e Pib per Capita
+  printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+  printf("PIB per Capita: %.2f \n", pibpercapita2);
+
+
+
 
 return 0;
 } 
