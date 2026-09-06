@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Nível Aventureiro
+// Nível Novato com If-Else
 
 int main (){
 
